@@ -1,20 +1,35 @@
 # Ultimate Member Tabs
-Contributors: plusplugins, hugmin42
-Requires at least: 4.0.0
-Tested up to: 4.3.1
 
-Easily add custom profile tabs to your Ultimate Member site
+### Easily add custom profile tabs to your Ultimate Member site
 
 ## Description
-A custom post type is registered and can be found under Profile Tabs under the Ultimate Member menu
 
-To add a new tab simply click on Add New. The post title will be used as the tab label.
+Easily add multiple custom profile tabs to your Ultimate Member site.
+
+Features:
+For each custom tab you can:
+- Set the name and icon of the tab
+- Set the position of tab
+- Control which user roles have the tab
+- Control which user roles can see the tab
+ 
+New!
+You can now output any field that a member has added to their profile using the following shortcode:
+[pp-tabs field=meta_value]
 
 ## Installation
-Plugin installation instruction.
+This plugin requires the Ultimate Member plugin.
+
+1. Upload the plugin to your wordpress site
+2. Active
+3. Done!
 
 ## Frequently Asked Questions
-Plugin frequently asked questions.
+How do you
 
 ## Changelog
-List versions from most recent at top to oldest at bottom.
+1.0.1
+- Added: Shortcode to output any user field
+
+1.0.0
+- Initial release
