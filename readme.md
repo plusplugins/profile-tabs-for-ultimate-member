@@ -6,16 +6,17 @@
 
 Easily add multiple custom profile tabs to your Ultimate Member site.
 
-Features:
+**Features:**
 For each custom tab you can:
+
 - Set the name and icon of the tab
 - Set the position of tab
 - Control which user roles have the tab
 - Control which user roles can see the tab
  
-New!
+**New!**
 You can now output any field that a member has added to their profile using the following shortcode:
-[pp-tabs field=meta_value]
+`[pp-tabs field=meta_value]`
 
 ## Installation
 This plugin requires the Ultimate Member plugin.
