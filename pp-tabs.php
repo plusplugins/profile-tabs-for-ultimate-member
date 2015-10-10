@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Ultimate Member Profile Tabs
+Plugin Name: Ultimate Member - Profile Tabs
 Plugin URI: https://plusplugins.com
 Description: Add custom profile tabs to your Ultimate Member site with content area and privacy settings.
 Author: PlusPlugins
-Version: 1.0.0
+Version: 1.0.1
 Author URI: https://plusplugins.com
 */
 
