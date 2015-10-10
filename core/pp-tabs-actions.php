@@ -43,9 +43,9 @@ function show_profile_tab_content() {
 	add_action('um_profile_content_' . $tab . '_default', function() use (&$tab) {
 
 		$args = array(
-		  'name'        => $tab,
-		  'post_type'   => 'um_tab',
-		  'numberposts' => 1
+			'name'       => $tab,
+			'post_type'  => 'um_tab',
+			'numberposts'=> 1,
 		);
 
 		$posts = get_posts($args);

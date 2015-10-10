@@ -4,11 +4,17 @@ function add_pp_profile_tabs( $tabs ) {
 
 	global $ultimatemember;
 
-	$posts = get_posts( array( 'post_type' => 'um_tab' ) );
+	$args = array(
+		'post_type'  => 'um_tab',
+		'meta_key'   => '_um_tab_position',
+		'orderby'    => 'meta_value_num',
+		'order'      => 'ASC',
+	);
+
+	$posts = get_posts( $args );
 	$user_role = get_user_meta(get_current_user_id(), 'role', true);
 	$profile_role = get_user_meta(um_profile_id(), 'role', true);
-	error_log("user role: " . $user_role);
-	error_log("profile role: " . $profile_role);
+	
 	foreach ($posts as $post) {
 
 		$post_id = $post->ID;
