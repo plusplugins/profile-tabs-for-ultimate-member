@@ -48,7 +48,7 @@
 		</p><div class="um-admin-clear"></div>
 	
 		<p>
-			<label class="um-admin-half"><?php _e('Is this a private tab?','pp-tabs'); ?> <?php $this->tooltip( __('Private tabs are only viewable to users on their own profile, as well as admin users','pp-tabs') ); ?></label>
+			<label class="um-admin-half"><?php _e('Is this a private tab?','pp-tabs'); ?> <?php $this->tooltip( __('Private tabs are only viewable to users on their own profile.','pp-tabs') ); ?></label>
 			<span class="um-admin-half"><?php $this->ui_on_off('_um_is_private_tab'); ?></span>
 		</p><div class="um-admin-clear"></div>
 		
