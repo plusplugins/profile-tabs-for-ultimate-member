@@ -75,14 +75,11 @@ function pp_tabs_output_field( $atts ) {
 		$key = $a['field'];
 		$showlabel = $a['label'];
 
-	//	if (um_user($key)){
-			//return $ultimatemember->fields->view_field($a['field'],array());
-			// return um_user($a['field']);
+		if (um_user($key)){
 
 			$output = null;
 
 		// get whole field data
-
 			$data = $ultimatemember->fields->get_field($key);
 			extract($data);
 
@@ -105,8 +102,8 @@ function pp_tabs_output_field( $atts ) {
 
 			/* Default */
 			default:
-		
-				$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">';
+
+			//	$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">';
 
 						if ( $showlabel == '1' ) {
 							$output .= $ultimatemember->fields->field_label($label, $key, $data);
@@ -114,11 +111,10 @@ function pp_tabs_output_field( $atts ) {
 
 						$res = stripslashes( $ultimatemember->fields->field_value( $key, $default, $data ) );
 
-						$output .= '<div class="um-field-area">';
-						$output .= '<div class="um-field-value">' . $res . '</div>';
-						$output .= '</div>';
-
-						$output .= '</div>';
+						//$output .= '<div class="um-field-area">';
+						$output .= $res; //'<div class="um-field-value">' . $res . '</div>';
+						//$output .= '</div>';
+						//$output .= '</div>';
 
 				break;
 
@@ -180,6 +176,10 @@ function pp_tabs_output_field( $atts ) {
 		}
 
 		return $output;
+
+	} else {
+    return '';
+	}
 
 }
 add_shortcode( 'pp-tabs', 'pp_tabs_output_field' );
