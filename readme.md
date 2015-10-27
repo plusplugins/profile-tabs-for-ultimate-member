@@ -14,6 +14,7 @@ For each custom tab you can:
 - Set the position of tab
 - Control which user roles have the tab
 - Control which user roles can see the tab
+- Make the tab private (only visible to profile owner)
 
 **New!**
 
