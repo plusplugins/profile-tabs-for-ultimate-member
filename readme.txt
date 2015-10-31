@@ -25,11 +25,11 @@ For each custom tab you can:
 
 You can now output any field that a member has added to their profile using the following shortcode:
 
-`[pp-tabs field=meta_value]`
+`[pp-tabs field=meta_key]`
 
 or, to display the field label as well:
 
-`[pp-tabs field=meta_value label=1]`
+`[pp-tabs field=meta_key label=1]`
 
 == Installation ==
 
