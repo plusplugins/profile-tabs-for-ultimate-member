@@ -25,7 +25,6 @@ class PP_Tabs_Shortcode {
 
 			$output = null;
 
-		
 			$data = $ultimatemember->fields->get_field($key);
 			extract($data);
 
@@ -49,19 +48,14 @@ class PP_Tabs_Shortcode {
 				/* Default */
 				default:
 
-				//	$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="'.$key.'">';
+					if ( $showlabel == '1' ) {
+						$output .= $ultimatemember->fields->field_label($label, $key, $data);
+					}
 
-							if ( $showlabel == '1' ) {
-								$output .= $ultimatemember->fields->field_label($label, $key, $data);
-							}
+					$res = stripslashes( $ultimatemember->fields->field_value( $key, $default, $data ) );
 
-							$res = stripslashes( $ultimatemember->fields->field_value( $key, $default, $data ) );
-
-							//$output .= '<div class="um-field-area">';
-							$output .= $res; //'<div class="um-field-value">' . $res . '</div>';
-							//$output .= '</div>';
-							//$output .= '</div>';
-
+					$output .= $res;
+							
 					break;
 
 				/* HTML */

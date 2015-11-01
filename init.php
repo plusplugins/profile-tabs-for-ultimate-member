@@ -7,15 +7,11 @@ class PP_Tabs {
 		$this->plugin_inactive = false;
 
 		add_action('init', array(&$this, 'plugin_check'), 1);
-
 		add_action('init', array(&$this, 'init'), 1);
 
 	}
 
-	/***
-	***	@Check plugin requirements
-	***/
-	function plugin_check(){
+	function plugin_check() {
 
 		if ( !class_exists('UM_API') ) {
 
@@ -31,9 +27,6 @@ class PP_Tabs {
 
 	}
 
-	/***
-	***	@Add notice
-	***/
 	function add_notice( $msg ) {
 
 		if ( !is_admin() ) return;
@@ -42,9 +35,6 @@ class PP_Tabs {
 
 	}
 
-	/***
-	***	@Init
-	***/
 	function init() {
 
 		if ( $this->plugin_inactive ) return;

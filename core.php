@@ -5,11 +5,8 @@ class PP_Tabs_Core {
 	function __construct() {
 
 		add_action('init', array(&$this, 'create_cpt'));
-
 		add_action('admin_menu', array(&$this,'add_admin_page'));
-
 		add_action('wp', array(&$this,'show_profile_tab_content'));
-
 		add_filter('um_profile_tabs', array(&$this,'add_profile_tabs'), 2000 );
 
 	}
@@ -29,7 +26,9 @@ class PP_Tabs_Core {
 					'show_ui' => true,
 					'show_in_menu' => false,
 					'public' => false,
-					'supports' => array('title','editor')
+					'supports' => array('title','editor'),
+					'publicly_queryable' => false,
+
 				)
 		);
 	}
@@ -68,8 +67,6 @@ class PP_Tabs_Core {
 
 	}
 
-
-
 	function add_profile_tabs( $tabs ) {
 
 		global $ultimatemember;
@@ -79,7 +76,7 @@ class PP_Tabs_Core {
 			'meta_key'   => '_pp_position',
 			'orderby'    => 'meta_value_num',
 			'order'      => 'ASC',
-			'posts_per_page' => 20,
+			'posts_per_page' => 99,
 		);
 
 		$posts = get_posts( $args );
@@ -123,10 +120,12 @@ class PP_Tabs_Core {
 			if ( $show ) {
 
 				$tabs[$post->post_name] = array(
-							'name' => $post->post_title,
-		       		'icon' => $meta['_pp_icon'][0],
-							'custom' => true,
+
+						'name' => $post->post_title,
+		       			'icon' => $meta['_pp_icon'][0],
+						'custom' => true,
 		       	);
+
 
 
 			}
