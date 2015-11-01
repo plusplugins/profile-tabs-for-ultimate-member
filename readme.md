@@ -6,7 +6,7 @@
 
 Easily add multiple custom profile tabs to your Ultimate Member site.
 
-**Features:**
+#### Features
 
 For each custom tab you can:
 
@@ -16,7 +16,7 @@ For each custom tab you can:
 - Control which user roles can see the tab
 - Make the tab private (only visible to profile owner)
 
-You can now output any field that a member has added to their profile using the following shortcode (replace "meta_key" with your field's meta key):
+You can output any field that a member has added to their profile using the following shortcode (replace `"meta_key"` with your field's meta key):
 
 `[pp-tabs field="meta_key"]`
 
@@ -32,7 +32,7 @@ This plugin requires the Ultimate Member plugin.
 3. Done!
 
 ## Frequently Asked Questions
-**Where do I add a custom tab?**
+#### Where do I add a custom tab?
 In the Wordpress Admin menu, go to Ultimate Member -> Profile Tabs
 
 ## Changelog
