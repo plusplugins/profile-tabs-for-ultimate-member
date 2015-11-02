@@ -52,5 +52,10 @@ In the Wordpress Admin menu, go to Ultimate Member -> Profile Tabs
 
 == Changelog ==
 
+= 1.1 =
+* New: Rewrite with CMB2
+* Fix: remove limit of 5 custom tabs
+* Added: Shortcode to output any user field
+
 = 1.0.0 =
 * Initial release
