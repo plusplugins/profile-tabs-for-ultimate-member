@@ -14,10 +14,10 @@ class PP_Tabs {
 
 	function plugin_check() {
 		if ( ! class_exists( 'UM_API' ) ) {
-			$this->notice_messge   = __( 'The <strong>Ultimate Member Profile Tabs</strong> plugin requires the Ultimate Member plugin to be activated to work properly. You can download it <a href="https://wordpress.org/plugins/ultimate-member">here</a>', 'pp-maps' );
+			$this->notice_messge   = __( 'The <strong>Ultimate Member Profile Tabs</strong> plugin requires the Ultimate Member plugin to be activated to work properly. You can download it <a href="https://wordpress.org/plugins/ultimate-member">here</a>', 'profile-tabs-for-ultimate-member' );
 			$this->plugin_inactive = true;
 		} else if ( ! version_compare( ultimatemember_version, PP_TABS_REQUIRES, '>=' ) ) {
-			$this->notice_messge   = __( 'The <strong>Ultimate Member Profile Tabs</strong> plugin  requires a <a href="https://wordpress.org/plugins/ultimate-member">newer version</a> of Ultimate Member to work properly.', 'pp-maps' );
+			$this->notice_messge   = __( 'The <strong>Ultimate Member Profile Tabs</strong> plugin  requires a <a href="https://wordpress.org/plugins/ultimate-member">newer version</a> of Ultimate Member to work properly.', 'profile-tabs-for-ultimate-member' );
 			$this->plugin_inactive = true;
 
 		}

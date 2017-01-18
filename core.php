@@ -14,14 +14,14 @@ class PP_Tabs_Core {
 
 		register_post_type('um_tab', array(
 			'labels'             => array(
-				'name'               => __('Profile Tabs'),
-				'singular_name'      => __('Profile Tab'),
-				'add_new'            => __('Add New'),
-				'add_new_item'       => __('Add New Profile Tab'),
-				'edit_item'          => __('Edit Profile Tab'),
-				'not_found'          => __('You did not create any profile tabs yet'),
-				'not_found_in_trash' => __('Nothing found in Trash'),
-				'search_items'       => __('Search Profile Tabs'),
+				'name'               => __( 'Profile Tabs', 'profile-tabs-for-ultimate-member' ),
+				'singular_name'      => __( 'Profile Tab', 'profile-tabs-for-ultimate-member' ),
+				'add_new'            => __( 'Add New', 'profile-tabs-for-ultimate-member' ),
+				'add_new_item'       => __( 'Add New Profile Tab', 'profile-tabs-for-ultimate-member' ),
+				'edit_item'          => __( 'Edit Profile Tab', 'profile-tabs-for-ultimate-member' ),
+				'not_found'          => __( 'You did not create any profile tabs yet', 'profile-tabs-for-ultimate-member' ),
+				'not_found_in_trash' => __( 'Nothing found in Trash', 'profile-tabs-for-ultimate-member' ),
+				'search_items'       => __( 'Search Profile Tabs', 'profile-tabs-for-ultimate-member' ),
 			),
 			'show_ui'            => true,
 			'show_in_menu'       => false,
@@ -36,7 +36,7 @@ class PP_Tabs_Core {
 
 	function add_admin_page() {
 
-		add_submenu_page('ultimatemember', __('Profile Tabs', 'ultimatemember'), __('Profile Tabs', 'ultimatemember'), 'manage_options', 'edit.php?post_type=um_tab', '', '');
+		add_submenu_page('ultimatemember', __('Profile Tabs', 'profile-tabs-for-ultimate-member'), __('Profile Tabs', 'profile-tabs-for-ultimate-member'), 'manage_options', 'edit.php?post_type=um_tab', '', '');
 	}
 
 	function show_profile_tab_content() {
@@ -199,5 +199,3 @@ class PP_Tabs_Core {
 	}
 
 }
-
-?>

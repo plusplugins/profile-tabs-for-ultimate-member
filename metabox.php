@@ -21,7 +21,7 @@ class PP_Tabs_Metabox {
 
 		$cmb = new_cmb2_box(array(
 			'id'           => 'pp_tabs_metabox',
-			'title'        => __('Options', 'pp-tabs'),
+			'title'        => __('Options', 'profile-tabs-for-ultimate-member'),
 			'object_types' => array('um_tab'),
 			'context'      => 'normal',
 			'priority'     => 'high',
@@ -29,8 +29,8 @@ class PP_Tabs_Metabox {
 		));
 
 		$cmb->add_field(array(
-			'name'        => __('Roles with this tab', 'pp-tabs'),
-			'after_field' => __('Select roles (leave blank to show on all profiles).', 'pp-tabs'),
+			'name'        => __('Roles with this tab', 'profile-tabs-for-ultimate-member'),
+			'after_field' => __('Select roles (leave blank to show on all profiles).', 'profile-tabs-for-ultimate-member'),
 			'id'          => $prefix . 'have_roles',
 			'type'        => 'pw_multiselect',
 			'options'     => $ultimatemember->query->get_roles(),
@@ -38,8 +38,8 @@ class PP_Tabs_Metabox {
 		));
 
 		$cmb->add_field(array(
-			'name'        => __('Roles that can view this tab', 'pp-tabs'),
-			'after_field' => __('Select roles (leave blank to make visible to all roles). If this tab is a private tab (see below) then the roles selected here will be able to view this tab.', 'pp-tabs'),
+			'name'        => __('Roles that can view this tab', 'profile-tabs-for-ultimate-member'),
+			'after_field' => __('Select roles (leave blank to make visible to all roles). If this tab is a private tab (see below) then the roles selected here will be able to view this tab.', 'profile-tabs-for-ultimate-member'),
 			'id'          => $prefix . 'view_roles',
 			'type'        => 'pw_multiselect',
 			'options'     => $ultimatemember->query->get_roles(),
@@ -47,38 +47,38 @@ class PP_Tabs_Metabox {
 		));
 
 		$cmb->add_field(array(
-			'name'        => __('Private Tab', 'pp-tabs'),
-			'after_field' => __('Private tabs are only visible to the profile owner and the roles specified above.', 'pp-tabs'),
+			'name'        => __('Private Tab', 'profile-tabs-for-ultimate-member'),
+			'after_field' => __('Private tabs are only visible to the profile owner and the roles specified above.', 'profile-tabs-for-ultimate-member'),
 			'id'          => $prefix . 'private',
 			'type'        => 'checkbox',
 		));
 
 		$cmb->add_field(array(
-			'name'        => __('Icon', 'pp-tabs'),
-			'after_field' => __('Enter an icon code to appear on the tab.', 'pp-tabs'),
+			'name'        => __('Icon', 'profile-tabs-for-ultimate-member'),
+			'after_field' => __('Enter an icon code to appear on the tab.', 'profile-tabs-for-ultimate-member'),
 			'id'          => $prefix . 'icon',
 			'default'     => 'um-faicon-tags',
 			'type'        => 'text_medium',
 		));
 
 		$cmb->add_field(array(
-			'name'    => __('Position', 'pp-tabs'),
-			'desc'    => __('A smaller number moves the tab further left on the profile bar.', 'pp-tabs'),
+			'name'    => __('Position', 'profile-tabs-for-ultimate-member'),
+			'desc'    => __('A smaller number moves the tab further left on the profile bar.', 'profile-tabs-for-ultimate-member'),
 			'id'      => $prefix . 'position',
 			'default' => '10',
 			'type'    => 'text_small',
 		));
 
 		$cmb->add_field(array(
-			'name' => __('Force to front', 'pp-tabs'),
-			'desc' => __('Display this tab before all other UM tabs.', 'pp-tabs'),
+			'name' => __('Force to front', 'profile-tabs-for-ultimate-member'),
+			'desc' => __('Display this tab before all other UM tabs.', 'profile-tabs-for-ultimate-member'),
 			'id'   => $prefix . 'force',
 			'type' => 'checkbox',
 		));
 
 		$cmb->add_field(array(
-			'name' => __('Custom URL', 'pp-tabs'),
-			'desc' => __('Enter a link to redirect the profile nav bar button.', 'pp-tabs'),
+			'name' => __('Custom URL', 'profile-tabs-for-ultimate-member'),
+			'desc' => __('Enter a link to redirect the profile nav bar button.', 'profile-tabs-for-ultimate-member'),
 			'id'   => $prefix . 'url',
 			'type' => 'text_url',
 		));

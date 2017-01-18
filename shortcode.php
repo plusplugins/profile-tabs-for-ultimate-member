@@ -138,5 +138,3 @@ class PP_Tabs_Shortcode {
 	}
 
 }
-
-?>
