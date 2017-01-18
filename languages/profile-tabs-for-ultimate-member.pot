@@ -1,0 +1,146 @@
+# Copyright (C) 2017 Ultimate Member - Profile Tabs
+# This file is distributed under the same license as the Ultimate Member - Profile Tabs package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Ultimate Member - Profile Tabs 1.2.8\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/profile-tabs-for-"
+"ultimate-member\n"
+"POT-Creation-Date: 2017-01-18 18:00:43+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: core.php:17 core.php:39
+msgid "Profile Tabs"
+msgstr ""
+
+#: core.php:18
+msgid "Profile Tab"
+msgstr ""
+
+#: core.php:19
+msgid "Add New"
+msgstr ""
+
+#: core.php:20
+msgid "Add New Profile Tab"
+msgstr ""
+
+#: core.php:21
+msgid "Edit Profile Tab"
+msgstr ""
+
+#: core.php:22
+msgid "You did not create any profile tabs yet"
+msgstr ""
+
+#: core.php:23
+msgid "Nothing found in Trash"
+msgstr ""
+
+#: core.php:24
+msgid "Search Profile Tabs"
+msgstr ""
+
+#: init.php:18
+msgid ""
+"The <strong>Ultimate Member Profile Tabs</strong> plugin requires the "
+"Ultimate Member plugin to be activated to work properly. You can download it "
+"<a href=\"https://wordpress.org/plugins/ultimate-member\">here</a>"
+msgstr ""
+
+#: init.php:21
+msgid ""
+"The <strong>Ultimate Member Profile Tabs</strong> plugin  requires a <a href="
+"\"https://wordpress.org/plugins/ultimate-member\">newer version</a> of "
+"Ultimate Member to work properly."
+msgstr ""
+
+#: metabox.php:24
+msgid "Options"
+msgstr ""
+
+#: metabox.php:32
+msgid "Roles with this tab"
+msgstr ""
+
+#: metabox.php:33
+msgid "Select roles (leave blank to show on all profiles)."
+msgstr ""
+
+#: metabox.php:41
+msgid "Roles that can view this tab"
+msgstr ""
+
+#: metabox.php:42
+msgid ""
+"Select roles (leave blank to make visible to all roles). If this tab is a "
+"private tab (see below) then the roles selected here will be able to view "
+"this tab."
+msgstr ""
+
+#: metabox.php:50
+msgid "Private Tab"
+msgstr ""
+
+#: metabox.php:51
+msgid ""
+"Private tabs are only visible to the profile owner and the roles specified "
+"above."
+msgstr ""
+
+#: metabox.php:57
+msgid "Icon"
+msgstr ""
+
+#: metabox.php:58
+msgid "Enter an icon code to appear on the tab."
+msgstr ""
+
+#: metabox.php:65
+msgid "Position"
+msgstr ""
+
+#: metabox.php:66
+msgid "A smaller number moves the tab further left on the profile bar."
+msgstr ""
+
+#: metabox.php:73
+msgid "Force to front"
+msgstr ""
+
+#: metabox.php:74
+msgid "Display this tab before all other UM tabs."
+msgstr ""
+
+#: metabox.php:80
+msgid "Custom URL"
+msgstr ""
+
+#: metabox.php:81
+msgid "Enter a link to redirect the profile nav bar button."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Ultimate Member - Profile Tabs"
+msgstr ""
+
+#. #-#-#-#-#  profile-tabs-for-ultimate-member.pot (Ultimate Member - Profile Tabs 1.2.8)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  profile-tabs-for-ultimate-member.pot (Ultimate Member - Profile Tabs 1.2.8)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://plusplugins.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Add custom profile tabs to your Ultimate Member site with content area and "
+"privacy settings."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "PlusPlugins"
+msgstr ""

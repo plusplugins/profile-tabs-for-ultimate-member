@@ -7,9 +7,10 @@ class PP_Tabs {
 	function __construct() {
 		$this->plugin_inactive = false;
 
+		add_action( 'admin_notices', array( $this, 'add_notice' ), 20 );
 		add_action( 'init', array( $this, 'plugin_check' ), 1 );
 		add_action( 'init', array( $this, 'init' ), 1 );
-		add_action( 'admin_notices', array( $this, 'add_notice' ), 20 );
+		add_action( 'plugins_loaded', array( $this, 'load_language_textdomain' ), 1 );
 	}
 
 	function plugin_check() {
@@ -43,6 +44,14 @@ class PP_Tabs {
 		$this->core      = new PP_Tabs_Core();
 		$this->metabox   = new PP_Tabs_Metabox();
 		$this->shortcode = new PP_Tabs_Shortcode();
+	}
+
+	function load_language_textdomain() {
+		$loaded = load_plugin_textdomain( 'profile-tabs-for-ultimate-member', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+		if ( ! $loaded ) {
+			load_muplugin_textdomain( 'profile-tabs-for-ultimate-member', '/languages/' );
+		}
 	}
 }
 

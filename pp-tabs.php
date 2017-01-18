@@ -10,8 +10,8 @@
  * Domain Path: /languages
  */
 
-define('PP_TABS_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('PP_TABS_PLUGIN_URI', plugin_dir_url(__FILE__));
-define('PP_TABS_REQUIRES', '1.3.20');
+define( 'PP_TABS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'PP_TABS_PLUGIN_URI', plugin_dir_url( __FILE__ ) );
+define( 'PP_TABS_REQUIRES', '1.3.20' );
 
 require_once PP_TABS_PLUGIN_DIR . 'init.php';
