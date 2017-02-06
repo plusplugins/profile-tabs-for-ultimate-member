@@ -40,6 +40,7 @@ class PP_Tabs {
 		require_once PP_TABS_PLUGIN_DIR . 'core.php';
 		require_once PP_TABS_PLUGIN_DIR . 'metabox.php';
 		require_once PP_TABS_PLUGIN_DIR . 'shortcode.php';
+		require_once PP_TABS_PLUGIN_DIR . 'pp-wpml.php';
 
 		$this->core      = new PP_Tabs_Core();
 		$this->metabox   = new PP_Tabs_Metabox();

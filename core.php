@@ -50,9 +50,10 @@ class PP_Tabs_Core {
 		}
 
 		$args = array(
-			'name'        => $tab,
-			'post_type'   => 'um_tab',
-			'numberposts' => 1,
+			'name'             => $tab,
+			'post_type'        => 'um_tab',
+			'numberposts'      => 1,
+			'suppress_filters' => 0,
 		);
 
 		$main_tab = get_posts( $args );
@@ -69,10 +70,11 @@ class PP_Tabs_Core {
 		} );
 
 		$subs_args = array(
-			'post_parent' => $main_tab[0]->ID,
-			'post_type'   => 'um_tab',
-			'numberposts' => -1,
-			'post_status' => 'any',
+			'post_parent'      => pp_lang_tab_id( $main_tab[0]->ID ),
+			'post_type'        => 'um_tab',
+			'numberposts'      => -1,
+			'suppress_filters' => 0,
+			'post_status'      => 'any',
 		);
 
 		$subs = get_children( $subs_args );
@@ -93,12 +95,13 @@ class PP_Tabs_Core {
 		global $ultimatemember;
 
 		$args = array(
-			'post_type'      => 'um_tab',
-			'meta_key'       => '_pp_position',
-			'orderby'        => 'meta_value_num',
-			'order'          => 'ASC',
-			'posts_per_page' => 99,
-			'post_parent'    => 0,
+			'post_type'        => 'um_tab',
+			'meta_key'         => '_pp_position',
+			'orderby'          => 'meta_value_num',
+			'order'            => 'ASC',
+			'posts_per_page'   => 99,
+			'post_parent'      => 0,
+			'suppress_filters' => 0,
 		);
 
 		$posts        = get_posts( $args );
@@ -107,7 +110,7 @@ class PP_Tabs_Core {
 
 		foreach ( $posts as $post ) {
 
-			$post_id     = $post->ID;
+			$post_id     = pp_lang_tab_id( $post->ID );
 			$meta        = get_post_meta( $post_id );
 			$have_roles  = array();
 			$view_roles  = array();
@@ -149,10 +152,11 @@ class PP_Tabs_Core {
 			}
 
 			$subs_args = array(
-				'post_parent' => $post->ID,
-				'post_type'   => 'um_tab',
-				'numberposts' => -1,
-				'post_status' => 'any',
+				'post_parent'      => pp_lang_tab_id( $post->ID ),
+				'post_type'        => 'um_tab',
+				'numberposts'      => -1,
+				'suppress_filters' => 0,
+				'post_status'      => 'any',
 			);
 
 			$subs = get_children( $subs_args );
