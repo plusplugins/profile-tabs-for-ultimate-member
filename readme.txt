@@ -1,7 +1,7 @@
 === Ultimate Member Profile Tabs ===
 Contributors: plusplugins
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TY7RLMFUCPVE4
-Tags: ultimate member, ultimatemember, user profiles, tabs, profile tabs, custom tabs, user tabs, member tabs
+Tags: ultimate member, ultimatemember, user profiles, tabs, profile tabs, custom tabs, user tabs, member tabs, reorder tabs, sort tabs, membership tabs, extra tabs
 Requires at least: 3.0.1
 Tested up to: 4.7.2
 Stable tag: 1.2.8
