@@ -72,11 +72,11 @@ You need a nested shortcode, using ours to get the profile id: `[pp-tabs field=i
 = 1.2.8 =
 * New: Support for localization
 * New: Confirm WPML compatibility
-* Update: Confirm WordPress 4.7.2 compatibilty
+* Update: Confirm WordPress 4.7.2 compatibility
 
 = 1.2.7 =
 * Fix: Plugin dependency notice issue
-* Update: Confirm WordPress 3.6.1 compatibilty
+* Update: Confirm WordPress 3.6.1 compatibility
 
 = 1.2.6 =
 * New: Use our shortcode to get profile ID and build dynamic shortcodes
