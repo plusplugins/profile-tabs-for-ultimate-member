@@ -69,7 +69,7 @@ You need a nested shortcode, using ours to get the profile id: `[pp-tabs field=i
 
 == Changelog ==
 
-= 2.0.0
+= 2.0.0 =
 * Update: Confirm UM 2.0 compatibility
 * Update: Confirm WordPress 4.9.5 compatibility
 
