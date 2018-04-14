@@ -43,7 +43,7 @@ class PP_Tabs_Core {
 
 		global $ultimatemember;
 
-		$tab = $ultimatemember->profile->active_tab();
+		$tab = UM()->profile()->active_tab();
 
 		if ( $tab == "main" ) {
 			return false;

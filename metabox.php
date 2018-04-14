@@ -33,7 +33,7 @@ class PP_Tabs_Metabox {
 			'after_field' => __( 'Select roles (leave blank to show on all profiles).', 'profile-tabs-for-ultimate-member' ),
 			'id'          => $prefix . 'have_roles',
 			'type'        => 'pw_multiselect',
-			'options'     => $ultimatemember->query->get_roles(),
+			'options'     => UM()->roles()->get_roles(),
 
 		) );
 
@@ -42,7 +42,7 @@ class PP_Tabs_Metabox {
 			'after_field' => __( 'Select roles (leave blank to make visible to all roles). If this tab is a private tab (see below) then the roles selected here will be able to view this tab.', 'profile-tabs-for-ultimate-member' ),
 			'id'          => $prefix . 'view_roles',
 			'type'        => 'pw_multiselect',
-			'options'     => $ultimatemember->query->get_roles(),
+			'options'     => UM()->roles()->get_roles(),
 
 		) );
 

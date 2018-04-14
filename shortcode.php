@@ -24,7 +24,7 @@ class PP_Tabs_Shortcode {
 
 		if ( um_user( $key ) ) {
 			$output = null;
-			$data   = $ultimatemember->fields->get_field( $key );
+			$data   = UM()->fields()->get_field( $key );
 			extract( $data );
 
 			if ( ! isset( $data['type'] ) ) {
@@ -37,7 +37,7 @@ class PP_Tabs_Shortcode {
 
 			if ( in_array( $type, array( 'block', 'shortcode', 'spacing', 'divider', 'group' ) ) ) {
 			} else {
-				if ( ! $ultimatemember->fields->field_value( $key, $default, $data ) ) {
+				if ( ! UM()->fields()->field_value( $key, $default, $data ) ) {
 					return;
 				}
 			}
@@ -54,9 +54,9 @@ class PP_Tabs_Shortcode {
 				/* Default */
 				default:
 					if ( $showlabel == '1' ) {
-						$output .= $ultimatemember->fields->field_label( $label, $key, $data );
+						$output .= UM()->fields()->field_label( $label, $key, $data );
 					}
-					$res = stripslashes( $ultimatemember->fields->field_value( $key, $default, $data ) );
+					$res = stripslashes( UM()->fields()->field_value( $key, $default, $data ) );
 					$output .= $res;
 					break;
 
@@ -93,11 +93,11 @@ class PP_Tabs_Shortcode {
 				case 'rating':
 					$output .= '<div class="um-field' . $classes . '"' . $conditional . ' data-key="' . $key . '">';
 					if ( isset( $data['label'] ) ) {
-						$output .= $ultimatemember->fields->field_label( $label, $key, $data );
+						$output .= UM()->fields()->field_label( $label, $key, $data );
 					}
 					$output .= '<div class="um-field-area">';
 					$output .= '<div class="um-field-value">
-											<div class="um-rating-readonly um-raty" id="' . $key . '" data-key="' . $key . '" data-number="' . $data['number'] . '" data-score="' . $ultimatemember->fields->field_value( $key, $default, $data ) . '"></div>
+											<div class="um-rating-readonly um-raty" id="' . $key . '" data-key="' . $key . '" data-number="' . $data['number'] . '" data-score="' . UM()->fields()->field_value( $key, $default, $data ) . '"></div>
 										</div>';
 					$output .= '</div>';
 					$output .= '</div>';
@@ -105,8 +105,8 @@ class PP_Tabs_Shortcode {
 			}
 
 			// Custom filter for field output
-			if ( isset( $ultimatemember->fields->set_mode ) ) {
-				$output = apply_filters( "um_{$key}_form_show_field", $output, $ultimatemember->fields->set_mode );
+			if ( isset( UM()->fields()->set_mode ) ) {
+				$output = apply_filters( "um_{$key}_form_show_field", $output, UM()->fields()->set_mode );
 			}
 
 			return $output;
