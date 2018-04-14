@@ -2,9 +2,10 @@
 Contributors: plusplugins
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TY7RLMFUCPVE4
 Tags: ultimate member, ultimatemember, user profiles, tabs, profile tabs, custom tabs, user tabs, member tabs, reorder tabs, sort tabs, membership tabs, extra tabs
-Requires at least: 4.1
-Tested up to: 4.9.5
-Stable tag: 2.0.0
+Requires at least: 4.1, Ultimate Member: 2.0.4
+Tested up to: 4.9.5, Ultimate Member: 2.0.8
+Requires PHP: 5.6
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,17 +13,21 @@ Easily add custom profile tabs to your Ultimate Member user profiles.
 
 == Description ==
 
-**Features:**
+Easily add custom profile tabs to your Ultimate Member user profiles.
+
+This plugin requires the [Ultimate Member](https://wordpress.org/plugins/ultimate-member/) plugin.
+
+= Features =
 
 For each custom tab you can:
 
-- Set the name and icon of the tab
-- Set the position of tab
-- Control which user roles have the tab
-- Control which user roles can see the tab
-- Make the tab private (only visible to profile owner)
-- Make the profile nav bar button redirect to a custom URL
-- Create subnavs
+* Set the name and icon of the tab
+* Set the position of tab
+* Control which user roles have the tab
+* Control which user roles can see the tab
+* Make the tab private (only visible to profile owner)
+* Make the profile nav bar button redirect to a custom URL
+* Create subnavs
 
 You can also output any field that a member has added to their profile using the following shortcode:
 
@@ -32,13 +37,21 @@ or, to display the field label as well:
 
 `[pp-tabs field=meta_key label=1]`
 
-**Pro Version**
+= Pro Version =
 
 Need to integrate a UM form in your custom tab? Take a look at [Ultimate Member Tabs Pro](https://plusplugins.com/downloads/ultimate-member-tabs-pro/). Split your monolithic UM profile form into neat, easy-to-navigate tabs!
 
-**More UM extensions**
+= More UM extensions =
 
 Want to extend your Ultimate Member site even more? Visit [PlusPlugins](https://plusplugins.com) for more Ultimate Member extensions.
+
+= Important: Upgrade Notice for 2.0.0 =
+
+This is an overhaul of changes *without* backwards compliance to make this plugin compatible with the "Ultimate Member – User Profile & Membership Plugin version 2.0.4". Please take **backup** measures before upgrading.
+
+= Feedback & Support =
+
+If you like this plugin, please [rate and/or review](https://wordpress.org/support/plugin/profile-tabs-for-ultimate-member/reviews/) it. If you have ideas on how to make the plugin even better or if you have found any bugs, please report these in the [Support Forum](https://wordpress.org/support/plugin/profile-tabs-for-ultimate-member/) or in the [GitHub repository](https://github.com/plusplugins/profile-tabs-for-ultimate-member/issues).
 
 == Installation ==
 
