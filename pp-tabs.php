@@ -4,7 +4,7 @@
  * Plugin URI: https://www.plusplugins.com
  * Description: Add custom profile tabs to your Ultimate Member site with content area and privacy settings.
  * Author: PlusPlugins
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author URI: https://www.plusplugins.com
  * Text Domain: profile-tabs-for-ultimate-member
  * Domain Path: /languages
