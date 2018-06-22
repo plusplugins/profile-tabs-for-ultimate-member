@@ -6,7 +6,6 @@ class PP_Tabs_Shortcode {
 	}
 
 	function output_field( $atts ) {
-		global $ultimatemember;
 
 		$a = shortcode_atts( array(
 			'field' => '',

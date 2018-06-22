@@ -15,8 +15,6 @@ class PP_Tabs_Metabox {
 
 	function cmb2_pp_tabs_metabox() {
 
-		global $ultimatemember;
-
 		$prefix = '_pp_';
 
 		$cmb = new_cmb2_box( array(

@@ -41,8 +41,6 @@ class PP_Tabs_Core {
 
 	function show_profile_tab_content() {
 
-		global $ultimatemember;
-
 		$tab = UM()->profile()->active_tab();
 
 		if ( $tab == "main" ) {
@@ -64,7 +62,15 @@ class PP_Tabs_Core {
 
 		add_action( "um_profile_content_{$tab}_default", function () use ( $main_tab ) {
 
-			$tab_content = apply_filters( 'the_content', $main_tab[0]->post_content );
+			$tab_content = $main_tab[0]->post_content;
+
+			if ( ( ! defined( 'PP_TABS_PRO_VERSION' ) ) && has_shortcode( $tab_content, 'ultimatemember' ) ) {
+				// The content has a [ultimatemember] short code; 
+				// strip all shortcodes from the content to avoid recursion & timeout
+				$tab_content = strip_shortcodes( $tab_content );
+			}
+
+			$tab_content = apply_filters( 'the_content', $tab_content );
 			echo $tab_content;
 
 		} );
@@ -91,8 +97,6 @@ class PP_Tabs_Core {
 	}
 
 	function add_profile_tabs( $tabs ) {
-
-		global $ultimatemember;
 
 		$args = array(
 			'post_type'        => 'um_tab',
