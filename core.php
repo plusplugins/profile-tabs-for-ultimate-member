@@ -109,8 +109,8 @@ class PP_Tabs_Core {
 		);
 
 		$posts        = get_posts( $args );
-		$user_role    = get_user_meta( get_current_user_id(), 'role', true );
-		$profile_role = get_user_meta( um_profile_id(), 'role', true );
+		$user_role    = UM()->roles()->get_all_user_roles( get_current_user_id() );
+		$profile_role = UM()->roles()->get_all_user_roles( um_profile_id() );
 
 		foreach ( $posts as $post ) {
 
@@ -131,24 +131,24 @@ class PP_Tabs_Core {
 			}
 
 			if ( ! empty( $have_roles ) ) {
-				if ( ! in_array( $profile_role, $have_roles ) ) {
+				if ( count( array_intersect( $profile_role, $have_roles ) ) <= 0 ) {
 					continue;
 				}
 			}
 
-			// if we are here then the profile has that tab - just need to check if user may view
-
+			// if we are here then the profile has that tab - just need to check if user may view 
 			if ( $private_tab ) {
 
 				// private tab - user on another profile but can not view
-				if ( um_profile_id() != get_current_user_id() && ! in_array( $user_role, $view_roles ) ) {
+				if ( um_profile_id() != get_current_user_id() && count( array_intersect( $user_role, $view_roles ) ) <= 0 ) {
 					continue;
 				}
 
 			} else {
+
 				// public tab - user can not view tab
 				if ( ! empty( $view_roles ) ) {
-					if ( ! in_array( $user_role, $view_roles ) ) {
+					if ( count( array_intersect( $user_role, $view_roles ) ) <= 0 ) {
 						continue;
 					}
 				}
@@ -200,10 +200,8 @@ class PP_Tabs_Core {
 
 				} );
 			}
-
 		}
 
 		return $tabs;
 	}
-
 }

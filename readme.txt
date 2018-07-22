@@ -2,10 +2,10 @@
 Contributors: plusplugins
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TY7RLMFUCPVE4
 Tags: ultimate member, ultimatemember, user profiles, tabs, profile tabs, custom tabs, user tabs, member tabs, reorder tabs, sort tabs, membership tabs, extra tabs
-Requires at least: 4.1, Ultimate Member: 2.0.4
-Tested up to: 4.9.6, Ultimate Member: 2.0.17
+Requires at least: 4.1
+Tested up to: 4.9.7
 Requires PHP: 5.6
-Stable tag: 2.0.2
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,11 @@ You need a nested shortcode, using ours to get the profile id: `[pp-tabs field=i
 2. Privacy and other options
 
 == Changelog ==
+
+= 2.1.0 =
+* Fix: User Role issue with tabs
+* Update: Confirm UM 2.0 User Roles Logic compatibility
+* Update: Confirm WordPress 4.9.7 compatibility
 
 = 2.0.2 =
 * Fix: Timeout issue when UM Profile Form shortcode is used
