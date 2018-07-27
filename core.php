@@ -110,7 +110,15 @@ class PP_Tabs_Core {
 
 		$posts        = get_posts( $args );
 		$user_role    = UM()->roles()->get_all_user_roles( get_current_user_id() );
-		$profile_role = UM()->roles()->get_all_user_roles( um_profile_id() );
+		$profile_role = UM()->roles()->get_all_user_roles( um_get_requested_user() );
+
+		if ( empty( $user_role ) ) {
+			$user_role = array();
+		}
+
+		if ( empty( $profile_role ) ) {
+			$profile_role = array();
+		}
 
 		foreach ( $posts as $post ) {
 

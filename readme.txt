@@ -5,7 +5,7 @@ Tags: ultimate member, ultimatemember, user profiles, tabs, profile tabs, custom
 Requires at least: 4.1
 Tested up to: 4.9.7
 Requires PHP: 5.6
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ You need a nested shortcode, using ours to get the profile id: `[pp-tabs field=i
 2. Privacy and other options
 
 == Changelog ==
+
+= 2.1.1 =
+* Fix: Warning: array_intersect() Argument #1 is not an array while logged out
 
 = 2.1.0 =
 * Fix: User Role issue with tabs
